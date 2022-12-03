@@ -18,5 +18,21 @@ const unlisten = listen('KeyRelease', (event) => {
 </script>
 
 <template>
-  <p>{{ greetMsg }}</p>
+  <div data-tauri-drag-region class="titlebar">
+    <p>{{ greetMsg }}</p>
+  </div>
 </template>
+
+<style scoped>
+.titlebar {
+  height: 30px;
+  background: #329ea3;
+  user-select: none;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+</style>

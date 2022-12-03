@@ -1,9 +1,18 @@
 import { defineConfig } from "vite";
+import { resolve } from 'path'
+import Pages from 'vite-plugin-pages'
 import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  resolve: {
+    alias: [
+      { find: '~/', replacement: `${resolve(__dirname, 'src')}/` },
+    ],
+  },
+  plugins: [vue(), Pages({
+    extensions: ['vue', 'md'],
+  }),],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   // prevent vite from obscuring rust errors
