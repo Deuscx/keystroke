@@ -33,7 +33,7 @@ pub fn get_key(key: Key) -> String {
         Key::MetaRight => "MetaRight".to_string(),
         Key::PageDown => "PageDown".to_string(),
         Key::PageUp => "PageUp".to_string(),
-        Key::Return => "Return".to_string(),
+        Key::Return => "Enter".to_string(),
         Key::RightArrow => "RightArrow".to_string(),
         Key::ShiftLeft => "ShiftLeft".to_string(),
         Key::ShiftRight => "ShiftRight".to_string(),
