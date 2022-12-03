@@ -1,21 +1,22 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { invoke } from "@tauri-apps/api/tauri";
+import { onUnmounted, ref } from "vue";
+import { emit, listen } from '@tauri-apps/api/event'
 
 const greetMsg = ref("");
 const name = ref("");
 
-async function greet() {
-  // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-  greetMsg.value = await invoke("greet", { name: name.value });
-}
+
+
+// listen to the `click` event and get a function to remove the event listener
+// there's also a `once` function that subscribes to an event and automatically unsubscribes the listener on the first event
+const unlisten = listen('KeyRelease', (event) => {
+  // event.event is the event name (useful if you want to use a single callback fn for multiple event types)
+  // event.payload is the payload object
+  greetMsg.value = event.payload || ''
+})
+
 </script>
 
 <template>
-  <div class="card">
-    <input id="greet-input" v-model="name" placeholder="Enter a name..." />
-    <button type="button" @click="greet()">Greet</button>
-  </div>
-
   <p>{{ greetMsg }}</p>
 </template>
