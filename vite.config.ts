@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from 'path'
 import Pages from 'vite-plugin-pages'
 import vue from "@vitejs/plugin-vue";
-
+import UnoCSS from "unocss/vite";
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -12,7 +12,9 @@ export default defineConfig({
   },
   plugins: [vue(), Pages({
     extensions: ['vue', 'md'],
-  }),],
+  }),
+  UnoCSS()
+  ],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   // prevent vite from obscuring rust errors
