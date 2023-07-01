@@ -1,0 +1,57 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:3333",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "starter-tauri",
+    "version": "../package.json"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.starter.tauri",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "starter-tauri",
+        "width": 800,
+        "height": 600,
+        "label": "starter-tauri"
+      }
+    ],
+    "updater": {
+      "active": true,
+      "dialog": true,
+      "endpoints": ["https://github.com/starter-monorepo/starter-tauri/releases/latest/download/latest.json"],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDE0MkU3M0JDRTI2NUM1MjMKUldRanhXWGl2SE11RkllT05xOTcrT2QzcERQWXFFWDIwYUdSbXhOR0lVejE5RE5UUUFpY0swdVIK"
+    }
+  }
+}
