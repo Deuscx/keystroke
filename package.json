@@ -1,5 +1,5 @@
 {
-  "name": "starter-tauri",
+  "name": "keystroke",
   "type": "module",
   "version": "0.0.3",
   "packageManager": "pnpm@8.6.1",

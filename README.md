@@ -1,13 +1,13 @@
-# starter-tauri
+# keystroke
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/deuscx/starter-tauri">
+  <a href="https://github.com/deuscx/keystroke">
     <!-- <img src="" alt="Logo" width="80" height="80"-->
   </a>
 
-  <h3 align="center">starter-tauri</h3>
+  <h3 align="center">keystroke</h3>
 
   <p align="center">
     a brief description
@@ -56,7 +56,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Add back to top links
 
 
-See the [open issues](https://github.com/deuscx/starter-tauri/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/deuscx/keystroke/issues) for a full list of proposed features (and known issues).
 
 <!-- LICENSE -->
 ## License
@@ -64,13 +64,13 @@ See the [open issues](https://github.com/deuscx/starter-tauri/issues) for a full
 Distributed under the MIT License. See [`LICENSE`]('./LICENSE') for more information.
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/deuscx/starter-tauri.svg?style=for-the-badge
-[contributors-url]: https://github.com/deuscx/starter-tauri/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/deuscx/starter-tauri.svg?style=for-the-badge
-[forks-url]: https://github.com/deuscx/starter-tauri/network/members
-[stars-shield]: https://img.shields.io/github/stars/deuscx/starter-tauri.svg?style=for-the-badge
-[stars-url]: https://github.com/deuscx/starter-tauri/stargazers
-[issues-shield]: https://img.shields.io/github/issues/deuscx/starter-tauri.svg?style=for-the-badge
-[issues-url]: https://github.com/deuscx/starter-tauri/issues
-[license-shield]: https://img.shields.io/github/license/deuscx/starter-tauri?style=for-the-badge
-[license-url]: https://github.com/deuscx/starter-tauri/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/deuscx/keystroke.svg?style=for-the-badge
+[contributors-url]: https://github.com/deuscx/keystroke/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/deuscx/keystroke.svg?style=for-the-badge
+[forks-url]: https://github.com/deuscx/keystroke/network/members
+[stars-shield]: https://img.shields.io/github/stars/deuscx/keystroke.svg?style=for-the-badge
+[stars-url]: https://github.com/deuscx/keystroke/stargazers
+[issues-shield]: https://img.shields.io/github/issues/deuscx/keystroke.svg?style=for-the-badge
+[issues-url]: https://github.com/deuscx/keystroke/issues
+[license-shield]: https://img.shields.io/github/license/deuscx/keystroke?style=for-the-badge
+[license-url]: https://github.com/deuscx/keystroke/blob/master/LICENSE

@@ -1,5 +1,5 @@
 [package]
-name = "starter-tauri"
+name = "keystroke"
 version = "0.0.0"
 description = "A Tauri App"
 authors = ["you"]
@@ -13,10 +13,11 @@ edition = "2021"
 tauri-build = { version = "1.3", features = [] }
 
 [dependencies]
-tauri = { version = "1.4", features = [ "updater", "system-tray", "shell-open"] }
+tauri = { version = "1.4", features = [ "window-maximize", "window-unminimize", "window-close", "window-hide", "window-unmaximize", "window-minimize", "window-show", "window-start-dragging", "updater", "system-tray", "shell-open"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 tauri-plugin-window-state = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
+rdev = "0.5.3"
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem

@@ -7,7 +7,7 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "starter-tauri",
+    "productName": "keystroke",
     "version": "../package.json"
   },
   "tauri": {
@@ -16,6 +16,17 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
       }
     },
     "systemTray": {
@@ -40,17 +51,18 @@
     "windows": [
       {
         "fullscreen": false,
-        "resizable": true,
-        "title": "starter-tauri",
-        "width": 800,
-        "height": 600,
-        "label": "starter-tauri"
+        "resizable": false,
+        "title": "keystroke",
+        "width": 200,
+        "height": 300,
+        "alwaysOnTop": true,
+        "decorations": false
       }
     ],
     "updater": {
       "active": true,
       "dialog": true,
-      "endpoints": ["https://github.com/starter-monorepo/starter-tauri/releases/latest/download/latest.json"],
+      "endpoints": ["https://github.com/deuscx/keystroke/releases/latest/download/latest.json"],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDE0MkU3M0JDRTI2NUM1MjMKUldRanhXWGl2SE11RkllT05xOTcrT2QzcERQWXFFWDIwYUdSbXhOR0lVejE5RE5UUUFpY0swdVIK"
     }
   }
