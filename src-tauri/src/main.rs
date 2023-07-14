@@ -2,11 +2,11 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 mod app;
 
-use app::menu;
 use app::commands;
+use app::listen_key;
+use app::menu;
+use commands::get_handlers;
 use menu::{get_menu, menu_event_handle};
-use commands::{get_handlers};
-
 fn main() {
     let menu = get_menu();
 
@@ -22,10 +22,17 @@ fn main() {
             .on_system_tray_event(system_tray_handle);
     }
 
-    tauri_app = tauri_app.menu(menu).on_menu_event(menu_event_handle);
+    // tauri_app = tauri_app.menu(menu).on_menu_event(menu_event_handle);
 
     tauri_app
+        .plugin(tauri_plugin_positioner::init())
+        .setup(|app| {
+            let handle = app.handle();
+            listen_key::create_device_query_listener(handle);
+            Ok(())
+        })
         .invoke_handler(get_handlers())
+        // This is required to get tray-relative positions to work
         .on_window_event(|event| {
             if let tauri::WindowEvent::CloseRequested { api, .. } = event.event() {
                 event.window().hide().unwrap();

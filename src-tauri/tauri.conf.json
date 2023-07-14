@@ -54,9 +54,10 @@
         "resizable": false,
         "title": "keystroke",
         "width": 200,
-        "height": 300,
+        "height": 40,
         "alwaysOnTop": true,
-        "decorations": false
+        "decorations": false,
+        "transparent": true
       }
     ],
     "updater": {

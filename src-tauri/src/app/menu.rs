@@ -71,26 +71,26 @@ pub fn get_system_tray(show_menu: bool) -> SystemTray {
 #[cfg(any(target_os = "linux", target_os = "windows"))]
 pub fn system_tray_handle(app: &tauri::AppHandle, event: SystemTrayEvent) {
     if let SystemTrayEvent::LeftClick { .. } = event {
-        app.get_window("starter-tauri").unwrap().show().unwrap();
+        app.get_window("keystroke").unwrap().show().unwrap();
     }
 
     if let SystemTrayEvent::MenuItemClick { tray_id: _, id, .. } = event {
         match id.as_str() {
             "hide_app" => {
-                app.get_window("starter-tauri").unwrap().hide().unwrap();
+                app.get_window("keystroke").unwrap().hide().unwrap();
             }
             "show_app" => {
-                app.get_window("starter-tauri").unwrap().show().unwrap();
+                app.get_window("keystroke").unwrap().show().unwrap();
             }
             "hide_menu" => {
-                app.get_window("starter-tauri")
+                app.get_window("keystroke")
                     .unwrap()
                     .menu_handle()
                     .hide()
                     .unwrap();
             }
             "show_menu" => {
-                app.get_window("starter-tauri")
+                app.get_window("keystroke")
                     .unwrap()
                     .menu_handle()
                     .show()

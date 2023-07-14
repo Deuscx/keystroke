@@ -16,12 +16,15 @@
   "dependencies": {
     "@tauri-apps/api": "^1.4.0",
     "@vueuse/core": "^10.2.0",
+    "tauri-plugin-positioner-api": "^0.2.7",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@actions/github": "^5.1.1",
     "@antfu/eslint-config": "^0.39.5",
+    "@iconify-json/carbon": "^1.1.18",
+    "@iconify-json/mdi": "^1.1.52",
     "@iconify/icons-carbon": "^1.2.18",
     "@tauri-apps/cli": "^1.4.0",
     "@types/node": "^20.3.1",
