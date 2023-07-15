@@ -46,9 +46,6 @@ pub fn get_system_tray() -> SystemTray {
 
 #[cfg(any(target_os = "linux", target_os = "windows"))]
 pub fn system_tray_handle(app: &tauri::AppHandle, event: SystemTrayEvent) {
-    if let SystemTrayEvent::LeftClick { .. } = event {
-        app.get_window("keystroke").unwrap().show().unwrap();
-    }
 
     if let SystemTrayEvent::MenuItemClick { tray_id: _, id, .. } = event {
         match id.as_str() {

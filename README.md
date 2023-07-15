@@ -4,13 +4,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/deuscx/keystroke">
-    <!-- <img src="" alt="Logo" width="80" height="80"-->
+    <!-- <img src="" alt="Logo" width="80" height="80" -->
   </a>
 
   <h3 align="center">keystroke</h3>
 
   <p align="center">
-    a brief description
+    A simple keylogger written in Rust + Vue
   </p>
 </div>
 
@@ -23,38 +23,10 @@
 
 <!-- ## Features -->
 
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-<!-- ## Try it Online
-
-link to demo or gif link-->
-
-## Installation
-
-```bash
-
-```
-
-
 
 <!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
+![](https://raw.githubusercontent.com/Deuscx/pic/master/829shots_so.png)
 <!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [ ] Add back to top links
-
 
 See the [open issues](https://github.com/deuscx/keystroke/issues) for a full list of proposed features (and known issues).
 

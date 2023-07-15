@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { listen } from '@tauri-apps/api/event'
 
-const specialKeysMap = {
+const specialKeysMap: Record<string, string> = {
   Enter: 'i-mdi:keyboard-return',
   Escape: 'i-mdi:keyboard-esc',
   Tab: 'i-mdi:keyboard-tab',
@@ -19,14 +19,15 @@ const specialKeysMap = {
 
 const specialKeys = Object.keys(specialKeysMap)
 
-const pressedKeys = ref([])
+const pressedKeys = ref<string[]>([])
 const needRefreshKeys = ['ShiftLeft', 'ControlLeft', 'MetaLeft', 'AltLeft']
 let disposeFn: Function[] = []
-const maxKeys = 8
+const maxKeys = 9
+
 onMounted(async () => {
   // listen to the `click` event and get a function to remove the event listener
   // there's also a `once` function that subscribes to an event and automatically unsubscribes the listener on the first event
-  const unlisten = await listen('KeyPress', (event) => {
+  const unlisten = await listen<string>('KeyPress', (event) => {
     // event.event is the event name (useful if you want to use a single callback fn for multiple event types)
     // event.payload is the payload object
     // console.log(event.event, event.payload)
@@ -47,7 +48,7 @@ tryOnUnmounted(() => {
 
 <template>
   <div data-tauri-drag-region class="h-100vh overflow-hidden bg-#333/50 grid place-items-center rounded text-xl">
-    <div class="flex gap-1 items-center select-none text-white" data-tauri-drag-region>
+    <div class="flex gap-1 items-center select-none text-white font-mono" data-tauri-drag-region>
       <div v-for="(key, index) in pressedKeys" :key="key + index" data-tauri-drag-region>
         <div v-if="specialKeys.includes(key)">
           <div :class="specialKeysMap[key]" data-tauri-drag-region />
