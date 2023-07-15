@@ -1,7 +1,7 @@
 {
   "name": "keystroke",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.0",
   "packageManager": "pnpm@8.6.1",
   "private": true,
   "scripts": {
@@ -16,7 +16,6 @@
   "dependencies": {
     "@tauri-apps/api": "^1.4.0",
     "@vueuse/core": "^10.2.0",
-    "tauri-plugin-positioner-api": "^0.2.7",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"
   },

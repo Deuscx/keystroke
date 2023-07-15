@@ -6,9 +6,7 @@ use app::commands;
 use app::listen_key;
 use app::menu;
 use commands::get_handlers;
-use menu::{get_menu, menu_event_handle};
 fn main() {
-    let menu = get_menu();
 
     let mut tauri_app = tauri::Builder::default();
 
@@ -16,16 +14,15 @@ fn main() {
     {
         use menu::{get_system_tray, system_tray_handle};
 
-        let system_tray = get_system_tray(true);
+        let system_tray = get_system_tray();
         tauri_app = tauri_app
             .system_tray(system_tray)
             .on_system_tray_event(system_tray_handle);
     }
 
-    // tauri_app = tauri_app.menu(menu).on_menu_event(menu_event_handle);
 
     tauri_app
-        .plugin(tauri_plugin_positioner::init())
+        .plugin(tauri_plugin_window_state::Builder::default().build())
         .setup(|app| {
             let handle = app.handle();
             listen_key::create_device_query_listener(handle);
