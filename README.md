@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/deuscx/keystroke">
-    <!-- <img src="" alt="Logo" width="80" height="80" -->
+    <img src="https://raw.githubusercontent.com/Deuscx/pic/master/829shots_so.png" alt="Logo" width="150" height="45">
   </a>
 
   <h3 align="center">keystroke</h3>
@@ -23,9 +23,7 @@
 
 <!-- ## Features -->
 
-
 <!-- USAGE EXAMPLES -->
-![](https://raw.githubusercontent.com/Deuscx/pic/master/829shots_so.png)
 <!-- ROADMAP -->
 
 See the [open issues](https://github.com/deuscx/keystroke/issues) for a full list of proposed features (and known issues).
@@ -34,7 +32,6 @@ See the [open issues](https://github.com/deuscx/keystroke/issues) for a full lis
 ## License
 
 Distributed under the MIT License. See [`LICENSE`]('./LICENSE') for more information.
-
 
 [contributors-shield]: https://img.shields.io/github/contributors/deuscx/keystroke.svg?style=for-the-badge
 [contributors-url]: https://github.com/deuscx/keystroke/graphs/contributors
