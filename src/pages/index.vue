@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { listen } from '@tauri-apps/api/event'
+import { settings } from '~/composables/settings'
 
 const specialKeysMap: Record<string, string> = {
   Enter: 'i-mdi:keyboard-return',
@@ -13,8 +14,8 @@ const specialKeysMap: Record<string, string> = {
   RightArrow: 'i-mdi:arrow-right',
   UpArrow: 'i-mdi:arrow-up',
   MetaLeft: 'i-mdi:apple-keyboard-command',
-  // "Space": "i-mdi:keyboard-space"
-  Space: ' ',
+  Space: 'i-mdi:keyboard-space',
+  // Space: ' ',
 }
 
 const specialKeys = Object.keys(specialKeysMap)
@@ -22,7 +23,6 @@ const specialKeys = Object.keys(specialKeysMap)
 const pressedKeys = ref<string[]>([])
 const needRefreshKeys = ['ShiftLeft', 'ControlLeft', 'MetaLeft', 'AltLeft']
 let disposeFn: Function[] = []
-const maxKeys = 9
 
 onMounted(async () => {
   // listen to the `click` event and get a function to remove the event listener
@@ -31,7 +31,7 @@ onMounted(async () => {
     // event.event is the event name (useful if you want to use a single callback fn for multiple event types)
     // event.payload is the payload object
     // console.log(event.event, event.payload)
-    if (pressedKeys.value.length >= maxKeys)
+    if (pressedKeys.value.length >= settings.value.maxKeyLength)
       pressedKeys.value.shift()
     if (needRefreshKeys.includes(event.payload))
       pressedKeys.value = []
@@ -48,7 +48,10 @@ tryOnUnmounted(() => {
 
 <template>
   <div data-tauri-drag-region class="h-100vh overflow-hidden bg-#333/50 grid place-items-center rounded text-xl">
-    <div class="flex gap-1 items-center select-none text-white font-mono" data-tauri-drag-region>
+    <div
+      class="flex gap-1 items-center select-none font-mono"
+      :style="{ fontSize: `${settings.fontSize}px`, color: settings.fontColor }" data-tauri-drag-region
+    >
       <div v-for="(key, index) in pressedKeys" :key="key + index" data-tauri-drag-region>
         <div v-if="specialKeys.includes(key)">
           <div :class="specialKeysMap[key]" data-tauri-drag-region />

@@ -7,6 +7,9 @@ dependencies:
   '@vueuse/core':
     specifier: ^10.2.0
     version: registry.npmmirror.com/@vueuse/core@10.2.0(vue@3.3.4)
+  radix-vue:
+    specifier: ^0.1.3
+    version: 0.1.3(vue@3.3.4)
   vue:
     specifier: ^3.3.4
     version: registry.npmmirror.com/vue@3.3.4
@@ -853,6 +856,26 @@ packages:
     resolution: {integrity: sha512-s2UHCoiXfxMvmfzqoN+vrQ84ahUSYde9qNO1MdxmoEhyHWsfmwOpFlwYV+ePJEVc7gFnATGUi376WowX1N7tFg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@floating-ui/core@1.3.1:
+    resolution: {integrity: sha512-Bu+AMaXNjrpjh41znzHqaz3r2Nr8hHuHZT6V2LBKMhyMl0FgKA62PNYbqnfgmzOhoWZj70Zecisbo4H1rotP5g==}
+    dev: false
+
+  /@floating-ui/dom@1.4.5:
+    resolution: {integrity: sha512-96KnRWkRnuBSSFbj0sFGwwOUd8EkiecINVl0O9wiZlZ64EkpyAOG3Xc2vKKNJmru0Z7RqWNymA+6b8OZqjgyyw==}
+    dependencies:
+      '@floating-ui/core': 1.3.1
+    dev: false
+
+  /@floating-ui/vue@1.0.1(vue@3.3.4):
+    resolution: {integrity: sha512-HZmmNWaztKYKOQxXvMzJYCYtfgG07cL/bPQvZ92AFG3Ktw71bvvLKXsZDAyIxGpqRo9WiTPsYknnSuLV2H/riA==}
+    dependencies:
+      '@floating-ui/dom': 1.4.5
+      vue-demi: 0.14.5(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /@humanwhocodes/config-array@0.11.10:
     resolution: {integrity: sha512-KVVjQmNUepDVGXNuoRRdmmEjruj0KfiGSbS8LVc12LMsWDQzRXJ0qdhN8L8uUigKpfEHRhlaQFY0ib1tnUbNeQ==}
@@ -4046,6 +4069,16 @@ packages:
   /queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
+
+  /radix-vue@0.1.3(vue@3.3.4):
+    resolution: {integrity: sha512-txmMO83R9Ux3L1EbidG+M9NiW6Vd1AqeLLgmufykOzLo0AGiCzVwt5ul/CuqBQUYNVvd1h9tSr+gxJZuwE6HSA==}
+    dependencies:
+      '@floating-ui/dom': 1.4.5
+      '@floating-ui/vue': 1.0.1(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /rc9@2.1.1:
     resolution: {integrity: sha512-lNeOl38Ws0eNxpO3+wD1I9rkHGQyj1NU1jlzv4go2CtEnEQEUfqnIvZG7W+bC/aXdJ27n5x/yUjb6RoT9tko+Q==}
