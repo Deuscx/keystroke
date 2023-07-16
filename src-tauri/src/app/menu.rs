@@ -38,7 +38,7 @@ pub fn get_menu() -> Menu {
 #[cfg(any(target_os = "linux", target_os = "windows"))]
 pub fn get_system_tray() -> SystemTray {
     let quit = CustomMenuItem::new("quit".to_string(), "Quit");
-    let setting = CustomMenuItem::new("setting".to_string(), "setting");
+    let setting = CustomMenuItem::new("setting".to_string(), "Settings");
     let tray_menu = SystemTrayMenu::new();
     let tray_menu = tray_menu.add_item(setting).add_item(quit);
     SystemTray::new().with_menu(tray_menu)
@@ -57,7 +57,7 @@ pub fn system_tray_handle(app: &tauri::AppHandle, event: SystemTrayEvent) {
                 let _setting =
                     WindowBuilder::new(app, "setting", WindowUrl::App("/setting".into()))
                         .resizable(false)
-                        .title("setting")
+                        .title("Settings")
                         .inner_size(300.0, 400.0)
                         .build()
                         .expect("can't open setting!");

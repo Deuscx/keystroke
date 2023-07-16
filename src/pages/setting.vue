@@ -5,11 +5,11 @@ import { settings } from '~/composables/settings'
 <template>
   <div class="flex gap-4 flex-col h-100vh bg-#cfcfcf/50">
     <div class="bg-white p-4 flex flex-col gap-4">
-      <h1 class="text-xl">
+      <h1 class="text-xl font-bold">
         Settings
       </h1>
       <div id="fontSize">
-        <div class="text-slate-900 leading-tight">
+        <div class="text-primary leading-tight">
           Font Size
         </div>
         <div class="flex items-center flex-1">
@@ -18,7 +18,7 @@ import { settings } from '~/composables/settings'
         </div>
       </div>
       <div id="fontColor">
-        <div class="text-slate-900 leading-tight">
+        <div class="text-primary leading-tight">
           Font Color
         </div>
         <div class="flex items-center flex-1">
@@ -26,7 +26,7 @@ import { settings } from '~/composables/settings'
         </div>
       </div>
       <div id="KeyLen">
-        <div class="text-slate-900 leading-tight">
+        <div class="text-primary leading-tight">
           Key Length
         </div>
         <div class="flex items-center flex-1">
@@ -39,4 +39,3 @@ import { settings } from '~/composables/settings'
 </template>
 
 <style scoped></style>
-SliderRoot
