@@ -32,6 +32,9 @@ fn main() {
         // This is required to get tray-relative positions to work
         .on_window_event(|event| {
             if let tauri::WindowEvent::CloseRequested { api, .. } = event.event() {
+                if(event.window().title().unwrap() == "Settings") {
+                    return;
+                }
                 event.window().hide().unwrap();
                 api.prevent_close();
             }
