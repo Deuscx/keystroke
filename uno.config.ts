@@ -1,3 +1,5 @@
+import fs from 'node:fs/promises'
+import path from 'node:path'
 import {
   defineConfig,
   presetAttributify,
@@ -24,6 +26,11 @@ export default defineConfig({
     presetIcons({
       scale: 1.2,
       warn: true,
+      collections: {
+        custom: {
+          alt: () => fs.readFile(path.resolve(__dirname, './src/assets/svgs/alt.svg'), 'utf-8'),
+        },
+      },
     }),
     presetWebFonts({
       fonts: {

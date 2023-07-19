@@ -54,10 +54,11 @@
         "resizable": false,
         "title": "keystroke",
         "width": 200,
-        "height": 40,
+        "height": 80,
         "alwaysOnTop": true,
         "decorations": false,
         "transparent": true,
+        "label": "main",
         "skipTaskbar": true
       }
     ],
