@@ -22,7 +22,7 @@ fn main() {
 
 
     tauri_app
-        .plugin(tauri_plugin_window_state::Builder::default().build())
+        // .plugin(tauri_plugin_window_state::Builder::default().build())
         .setup(|app| {
             let handle = app.handle();
             listen_key::create_device_query_listener(handle);
