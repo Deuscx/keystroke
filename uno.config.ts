@@ -1,4 +1,4 @@
-import fs from 'node:fs/promises'
+import fs from 'node:fs'
 import path from 'node:path'
 import {
   defineConfig,
@@ -10,6 +10,15 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
+const baseSvgPath = path.resolve(__dirname, './src/assets/svgs')
+const icons = fs.readdirSync(baseSvgPath)
+
+const iconsMap = icons.reduce<Record<string, string>>((map, filename) => {
+  const iconName = path.basename(filename, '.svg')
+  map[iconName] = fs.readFileSync(path.resolve(baseSvgPath, filename), 'utf-8')
+  return map
+}, {})
+console.log(icons)
 export default defineConfig({
   theme: {
     colors: {
@@ -27,9 +36,7 @@ export default defineConfig({
       scale: 1.2,
       warn: true,
       collections: {
-        custom: {
-          alt: () => fs.readFile(path.resolve(__dirname, './src/assets/svgs/alt.svg'), 'utf-8'),
-        },
+        custom: iconsMap,
       },
     }),
     presetWebFonts({

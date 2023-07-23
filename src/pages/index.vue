@@ -17,6 +17,18 @@ const specialKeysMap: Record<string, string> = {
   MetaLeft: 'i-mdi:apple-keyboard-command',
   Space: 'i-mdi:keyboard-space',
   Alt: 'i-custom-alt',
+  F1: 'i-mdi:keyboard-f1',
+  F2: 'i-mdi:keyboard-f2',
+  F3: 'i-mdi:keyboard-f3',
+  F4: 'i-mdi:keyboard-f4',
+  F5: 'i-mdi:keyboard-f5',
+  F6: 'i-mdi:keyboard-f6',
+  F7: 'i-mdi:keyboard-f7',
+  F8: 'i-mdi:keyboard-f8',
+  F9: 'i-mdi:keyboard-f9',
+  F10: 'i-mdi:keyboard-f10',
+  F11: 'i-mdi:keyboard-f11',
+  F12: 'i-mdi:keyboard-f12',
   // Space: ' ',
 }
 
