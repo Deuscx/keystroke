@@ -5,7 +5,7 @@ import UnoCSS from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Pages from 'vite-plugin-pages'
-
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
   resolve: {
@@ -35,6 +35,7 @@ export default defineConfig(async () => ({
     // https://github.com/antfu/vite-plugin-components
     Components({
       dts: true,
+      resolvers: [NaiveUiResolver()]
     }),
     UnoCSS(),
     // Devtools(),

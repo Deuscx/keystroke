@@ -8,6 +8,9 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Greet: typeof import('./src/components/Greet.vue')['default']
+    NColorPicker: typeof import('naive-ui')['NColorPicker']
+    NInputNumber: typeof import('naive-ui')['NInputNumber']
+    NSlider: typeof import('naive-ui')['NSlider']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

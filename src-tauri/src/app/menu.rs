@@ -58,7 +58,7 @@ pub fn system_tray_handle(app: &tauri::AppHandle, event: SystemTrayEvent) {
                     WindowBuilder::new(app, "setting", WindowUrl::App("/setting".into()))
                         .resizable(false)
                         .title("Settings")
-                        .inner_size(300.0, 400.0)
+                        .inner_size(300.0, 600.0)
                         .build()
                         .expect("can't open setting!");
             }
